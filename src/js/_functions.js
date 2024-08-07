@@ -72,7 +72,6 @@ function popupOpen(curentPopup) {
       bodyLock();
     }
     curentPopup.classList.add("open");
-    console.log(32);
     curentPopup.addEventListener("click", function (e) {
       if (!e.target.closest(".popup__content")) {
         popupClose(e.target.closest(".popup"));
