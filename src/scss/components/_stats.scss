@@ -1,0 +1,35 @@
+.stats {
+  width: 100%;
+  background: #f2f8ff;
+  margin-bottom: 50px;
+}
+
+.stats__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  gap: 82px;
+
+  .stat {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+
+    .stat-count {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 119%;
+      color: #161c24;
+    }
+
+    .stat-desc {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 162%;
+      color: #454f5b;
+    }
+  }
+}

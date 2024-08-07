@@ -1,0 +1,19 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/stats";
+@import "./components/why";
+@import "./components/category";
+@import "./components/popular-product.scss";
+@import "./components/recall";
+@import "./components/footer";
+@import "./components/category-main";
+@import "./components/modal-window";
+
+// тестовые стили, удалите их

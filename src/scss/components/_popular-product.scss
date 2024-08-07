@@ -1,0 +1,148 @@
+.popular-product {
+  width: 100%;
+  position: relative;
+  padding: 50px 0;
+}
+
+.popular-product__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 64px;
+
+  .section-title {
+    text-align: start;
+  }
+
+  .popular-product__swiper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .popular-product__swiper-nav {
+    position: absolute;
+    display: flex;
+    gap: 40px;
+    right: 0;
+    width: 100%;
+    max-width: 120px;
+    min-height: 40px;
+
+    .swiper-btn {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+.popular-product__item {
+  .item__img {
+    position: relative;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .content-on-img {
+      position: absolute;
+      top: 0;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .item__gift {
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.03);
+        background: #fff;
+        padding: 6px 8px;
+        display: flex;
+        gap: 10px;
+        max-width: 90px;
+
+        .gift-icon {
+          width: 12px;
+          height: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .gift-text {
+          font-weight: 400;
+          font-size: 12px;
+          color: #161c24;
+        }
+      }
+
+      .content-on-img__up-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .item__is-contain {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+
+          .is-contain-icon {
+            width: 20px;
+            height: 20px;
+            background: #fff;
+          }
+
+          .is-contain-text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 171%;
+            color: #454f5b;
+          }
+        }
+
+        .item__sale {
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.03);
+          background: #fff;
+          padding: 8px 10px;
+
+          .sale-text {
+            font-weight: 500;
+            font-size: 12px;
+            color: #161c24;
+          }
+        }
+      }
+    }
+  }
+
+  .item__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 12px;
+
+    .item__cost-block {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      .item__cost-value {
+        font-weight: 600;
+        font-size: 20px;
+        color: #161c24;
+
+        &.old {
+          font-weight: 300;
+          font-size: 18px;
+          text-decoration: line-through;
+          color: #454f5b;
+        }
+      }
+    }
+  }
+}

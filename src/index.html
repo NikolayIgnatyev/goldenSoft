@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+
+   @include('partials/head.html',{
+   title: 'Golden Soft'
+   })
+
+   <body class="page__body">
+      <div class="site-container">
+         @include('partials/header.html')
+         <main class="main">
+            @include('partials/hero.html')
+            @include('partials/stats.html')
+            @include('partials/why.html')
+            @include('partials/category.html')
+            @include('partials/popular-product.html')
+            @include('partials/recall.html')
+            @include('partials/modal-window.html')
+         </main>
+         @include('partials/footer.html')
+      </div>
+   </body>
+
+</html>
