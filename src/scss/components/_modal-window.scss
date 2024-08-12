@@ -1,4 +1,4 @@
-/* Стили для модального окна */
+
 .popup {
   position: fixed;
   top: 0;
@@ -20,15 +20,15 @@ body.lock {
   overflow-y: hidden;
 }
 
-.popup__container {
+.popup__body {
   position: relative;
+  padding: 20px;
+  max-width: 436px;
 }
 
 .popup__content {
   border: 1px solid #eaeaea;
   padding: 48px;
-  width: 436px;
-  height: 372px;
   box-shadow: 0 33px 50px 0 rgba(58, 87, 116, 0.03);
   background: #fff;
   display: flex;

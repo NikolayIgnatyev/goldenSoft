@@ -191,7 +191,25 @@ const swiperPopularProduct = new Swiper('.popular-product__swiper', {
     nextEl: ".popular-product__swiper-btn-next",
     prevEl: ".popular-product__swiper-btn-prev",
   },
+  on: {
+    init: function() {
+      adjustSlideHeight();
+    },
+    resize: function() {
+      adjustSlideHeight();
+    }
+  }
 });
+
+function adjustSlideHeight() {
+  const swiper = document.querySelector('.popular-product__swiper')
+  const slides = swiper.querySelectorAll('.swiper-slide');
+  const wrapperHeight = swiper.querySelector('.swiper-wrapper').clientHeight;
+
+  slides.forEach((slide) => {
+    slide.style.height = `${wrapperHeight}px`;
+  });
+}
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';

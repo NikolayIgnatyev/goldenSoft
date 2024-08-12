@@ -47,6 +47,17 @@
     line-height: 162%;
     color: #454f5b;
     padding: 12px 16px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+
+    &:hover{
+      border: 1px solid #4295e4;
+    }
+
+    &:focus-visible{
+      outline: none;
+      border: 1px solid #4295e4;
+    }
   }
 }
 

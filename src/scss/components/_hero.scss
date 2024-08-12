@@ -18,7 +18,7 @@
     background: #fff;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
     width: 100%;
     gap: 70px;
     background: transparent;
@@ -30,7 +30,6 @@
     }
 
     .slide__text-content {
-      padding-top: 50px;
       max-width: 600px;
       width: 50%;
       display: flex;
@@ -132,6 +131,7 @@
         height: 6px;
         background-color: #add7ff;
         transition: 0.3s;
+        opacity: 1;
       }
 
       .swiper-pagination-bullet-active {
