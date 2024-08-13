@@ -24,7 +24,7 @@
     background: transparent;
     text-align: start;
 
-    .slide-img{
+    .slide-img {
       width: 50%;
       height: auto;
     }
@@ -102,7 +102,7 @@
             transition: 0.3s;
             border: 1px solid transparent;
 
-            &:hover{
+            &:hover {
               color: #4295e4;
               background: #fff;
               border-color: #4295e4;
@@ -157,8 +157,75 @@
       }
     }
   }
+
   .swiper-btn {
     width: 32px;
     height: 32px;
+  }
+}
+
+@media (max-width:768px) {
+  .swiper-slide-hero {
+    flex-direction: column;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content .slide-description .buy-block .btn-buy {
+    max-width: unset;
+    width: 100%;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content .slide-description .buy-block {
+    width: 100%;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content .slide-description {
+    max-width: unset;
+  }
+}
+
+@media (max-width:640px) {
+  .hero_swiper {
+    padding-top: 35px;
+    padding-bottom: 40px;
+    gap: 32px;
+
+    .swiper-slide-hero {
+      gap: 20px;
+    }
+  }
+
+  .hero_swiper .swiper-slide-hero .slide-img {
+    width: 100%;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content .slide-description .description-text-block {
+    display: none;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content .slide-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 155%;
+    color: #161c24;
+  }
+
+  .hero_swiper .swiper-slide-hero .slide__text-content{
+    gap: 24px;
+  }
+
+  .hero_swiper .swiper-nav{
+    justify-content: space-between;
+  }
+
+}
+
+@media (max-width:480px) {
+  .hero_swiper .swiper-slide-hero .slide__text-content .slide-title{
+    font-size: 22px;
   }
 }

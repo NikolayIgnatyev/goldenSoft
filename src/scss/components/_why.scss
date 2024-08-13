@@ -42,9 +42,51 @@
       color: #454f5b;
     }
 
-    .why__card-icon{
+    .why__card-icon {
       height: auto;
       width: 25%;
     }
+  }
+}
+
+@media (max-width:640px) {
+  .why {
+    padding: 20px 0;
+  }
+
+  .why_container {
+    gap: 24px 0;
+  }
+
+  .why-cards-block {
+    display: flex;
+    flex-direction: column;
+
+    .why-card {
+      border-left: none;
+      border-right: none;
+      border-top: 1px solid #c4cdd5;
+      border-bottom: 1px solid #c4cdd5;
+      padding: 24px 28px;
+      gap: 16px;
+
+      .why__text {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 162%;
+        text-align: center;
+        color: #454f5b;
+      }
+    }
+  }
+}
+
+@media (max-width:480px){
+  .section-title{
+    font-size: 22px;
+  }
+
+  .why-cards-block .why-card .why__text{
+    font-size: 16px;
   }
 }

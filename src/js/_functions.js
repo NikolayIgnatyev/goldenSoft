@@ -174,6 +174,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 Swiper.use([Navigation, Pagination]);
 const swiperHero = new Swiper('.hero_swiper', {
+  spaceBetween: 20,
   pagination: {
     el: ".hero-pagination",
     clickable: true,
@@ -185,7 +186,7 @@ const swiperHero = new Swiper('.hero_swiper', {
 });
 
 const swiperPopularProduct = new Swiper('.popular-product__swiper', {
-  slidesPerView: 4,
+  slidesPerView: 1.15,
   spaceBetween: 30,
   navigation: {
     nextEl: ".popular-product__swiper-btn-next",
@@ -197,6 +198,17 @@ const swiperPopularProduct = new Swiper('.popular-product__swiper', {
     },
     resize: function() {
       adjustSlideHeight();
+    }
+  },
+  breakpoints:{
+    979:{
+      slidesPerView: 4,
+    },
+    769:{
+      slidesPerView: 3.5,
+    },
+    481:{
+      slidesPerView: 2.15,
     }
   }
 });
@@ -210,6 +222,48 @@ function adjustSlideHeight() {
     slide.style.height = `${wrapperHeight}px`;
   });
 }
+
+
+import { disableScroll } from './functions/disable-scroll';
+import { enableScroll } from './functions/enable-scroll';
+import _vars from './_vars';
+
+const burger = document?.querySelector('[data-burger]');
+const menu = document?.querySelector('[data-menu]');
+const overlay = document?.querySelector('[data-menu-overlay]');
+
+burger?.addEventListener('click', (e) => {
+  burger?.classList.toggle('burger--active');
+  menu?.classList.toggle('menu--active');
+
+  if (menu?.classList.contains('menu--active')) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+});
+
+overlay?.addEventListener('click', () => {
+  burger.classList.remove('burger--active');
+  menu.classList.remove('menu--active');
+  enableScroll();
+});
+
+
+const catalogLink = document.querySelector('.drop-down');
+const catalogMenu = document.querySelector('.catalog-menu');
+
+catalogLink.addEventListener('click', (e) => {
+  if (e.target.closest('.close-catalog-menu')) {
+    catalogMenu.classList.remove('catalog-menu__active');
+
+  } else {
+    catalogMenu.classList.add('catalog-menu__active');
+  }
+});
+
+
+
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';
